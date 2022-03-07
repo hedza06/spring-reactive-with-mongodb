@@ -1,0 +1,17 @@
+<html>
+<body>
+    <script type="text/javascript">
+        window.addEventListener('load', function(e){
+            var ws = new WebSocket("ws://localhost:8080/ws/employee-test");
+            ws.addEventListener('open', function(e) {
+                var employeeName = window.prompt("Enter employee name...");
+                ws.send(employeeName);
+            });
+            ws.addEventListener('message', function(msg) {
+                console.log('New message arrived...');
+                console.log(msg.data);
+            });
+        });
+    </script>
+</body>
+</html>
