@@ -37,7 +37,7 @@ public class WebSocketConfig {
             var response = session
                 .receive()
                 .map(WebSocketMessage::getPayloadAsText)
-                .map(name -> new EmployeeDao(name, 30))
+                .map(EmployeeDao::new)
                 .flatMap(employeeProducer::stream)
                 .map(EmployeeDao::getFullName)
                 .map(session::textMessage);

@@ -12,4 +12,7 @@ public class EmployeeDao {
     private String fullName;
     private Integer age;
 
+    public EmployeeDao(String fullName) {
+        this.fullName = fullName;
+    }
 }

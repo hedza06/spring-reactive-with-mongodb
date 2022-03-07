@@ -6,16 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
 import java.util.Date;
 
 @Data
 @Document
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee implements Serializable {
-
-    private static final long serialVersionUUID = 2022030720490000L;
+public class Employee {
 
     @Id
     private String id;
