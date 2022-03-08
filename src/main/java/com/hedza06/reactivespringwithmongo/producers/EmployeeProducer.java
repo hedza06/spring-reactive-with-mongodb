@@ -1,6 +1,7 @@
 package com.hedza06.reactivespringwithmongo.producers;
 
 import com.hedza06.reactivespringwithmongo.dao.EmployeeDao;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
@@ -9,6 +10,7 @@ import java.time.Instant;
 import java.util.stream.Stream;
 
 @Component
+@RequiredArgsConstructor
 public class EmployeeProducer {
 
     public Flux<EmployeeDao> stream(EmployeeDao employeeDao)
